@@ -10,7 +10,7 @@ esm_tests = (ESM) ->
     ns = 'default'
 
     naction = 50
-    nevents = 2000
+    nevents = 50000
     nevents_diff = 25
     nbevents = 10000
     nfindpeople = 25
@@ -28,7 +28,7 @@ esm_tests = (ESM) ->
       console.log "####################################################"
       console.log ""
       console.log ""
-      @timeout(360000)
+      @timeout(36000000)
       init_ger(ESM, ns)
       .then((ger) ->
         st = new Date().getTime()
@@ -55,7 +55,7 @@ esm_tests = (ESM) ->
             et = new Date().getTime()
             time = et-st
             pe = time/nevents
-            console.log "#{pe}ms adding events in #{nevents_diff} per set"
+            console.log "#{pe}ms per event when adding events in #{nevents_diff} per set"
           )
         )
         .then( ->

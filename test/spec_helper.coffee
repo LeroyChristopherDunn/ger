@@ -21,8 +21,7 @@ global.Readable = require('stream').Readable;
 
 global.moment = require "moment"
 
-global._knex = g.knex({client: 'pg', pool: {min: 5, max: 20}, connection: {host: '127.0.0.1', user : 'postgres', password : 'postgres', database : 'ger_test'}})
-
+global._knex = g.knex({client: 'pg', pool: {min: 5, max: 20}, connection: {host: '127.0.0.1', user : 'postgres', password : 'docker', port: 5000, database : 'test_db'}})
 
 global.default_namespace = 'default'
 
